@@ -1,13 +1,14 @@
 import React from "react";
 import Contact from "./Contact";
 
-export default function User({ user }) {
+export default function User({ picture, name, age, ...restOfObject }) {
+  console.log(picture);
   return (
     <div>
-      <img src={user.picture} alt="name" />
-      <p>Name : {user.name}</p>
-      <p>Age : {user.age}</p>
-      <Contact user={user} />
+      <img src={picture} alt="name" />
+      <p>Name : {name}</p>
+      <p>Age : {age}</p>
+      <Contact {...restOfObject} />
     </div>
   );
 }

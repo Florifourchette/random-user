@@ -44,9 +44,11 @@ function App() {
       <h1>
         <a href="/instructions.html"> instructions </a>
       </h1>
-      {users.map((user) => (
-        <User user={user} />
-      ))}
+      {users.map((user) => {
+        const newuser = { ...user };
+        console.log(newuser);
+        return <User {...user} />;
+      })}
     </div>
   );
 }

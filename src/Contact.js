@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Contact({ user }) {
+export default function Contact({ address, email, phone }) {
   return (
     <div>
-      <p>Address:{user.address} </p>
-      <p>Email: {user.email}</p>
-      <p>Phone number: {user.phone}</p>
+      <p>Address:{address} </p>
+      <p>Email: {email}</p>
+      <p>Phone number: {phone}</p>
     </div>
   );
 }
